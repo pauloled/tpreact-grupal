@@ -5,13 +5,13 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#lucas">Integrante 1</a></li>
-        <li><a href="#luciana">Integrante 2</a></li>
-        <li><a href="#julieta">Integrante 3</a></li>
-        <li><a href="#jorge">Integrante 4</a></li>
-        <li><a href="#cristian">Integrante 5</a></li>
-        <li><a href="#agregar">Agregar</a></li>
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#lucas">PAULO</a></li>
+        <li><a href="#luciana">SANTIAGO</a></li>
+        <li><a href="#julieta">JOSE</a></li>
+        <li><a href="#jorge">LEONARDO</a></li>
+        <li><a href="#cristian">SANTIAGO</a></li>
+        <li><a href="#agregar">AGREGAR</a></li>
       </ul>
     </nav>
   );

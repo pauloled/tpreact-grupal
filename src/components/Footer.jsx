@@ -3,7 +3,7 @@ import '../styles/Footer.css';
 
 const Footer = () => (
   <footer className="footer">
-    <p>Grupo 7 - Comisión React</p>
+    <p>Grupo 7 - Comisión 1 - Programaciòn III</p>
   </footer>
 );
 

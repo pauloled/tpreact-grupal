@@ -1,28 +1,32 @@
-// Nombre: [Tus nombres y legajos]
-// Ejemplo:
-// Pablo Díaz - 12345
-// Juan Gómez - 67890
+// NOMBRE - LEGAJO
+// Paulo ledesma - 61035
+// Santiago Ledesma - 61115
+// Jose Quiroga - 61033
+// Leonardo Ramirez - 61084
+// Santiago Navarro - 61205
 
 import "./styles/App.css";
 import HomePages from "./pages/Homepages";
+import paulo_foto from './assets/paulo_foto.jpg';
+import santi_foto from './assets/santi_foto.jpg';
 
 function App() {
   const integrantes = [
     {
-      id: "paulo",
+      id: "Paulo",
       nombre: "Paulo",
       apellido: "Ledesma",
-      legajo: "12345",
-      github: "https://github.com/lucasgonzalez",
-      foto: "https://via.placeholder.com/200"
+      legajo: "61035",
+      github: "https://github.com/pauloled",
+      foto: paulo_foto
     },
     {
-      id: "luciana",
-      nombre: "Luciana",
-      apellido: "Martínez",
-      legajo: "23456",
-      github: "https://github.com/lucianamartinez",
-      foto: "https://via.placeholder.com/200"
+      id: "Santiago",
+      nombre: "Santiago",
+      apellido: "Ledesma",
+      legajo: "61115",
+      github: "https://github.com/santled",
+      foto: santi_foto
     },
     {
       id: "julieta",
