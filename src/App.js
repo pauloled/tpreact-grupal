@@ -1,21 +1,45 @@
 // Integrantes:
-// - Nombre Apellido - Legajo
-// - Nombre Apellido - Legajo
-// - Nombre Apellido - Legajo
+// Juan Pérez - Legajo 12345
+// Ana Gómez - Legajo 23456
+// Pedro Díaz - Legajo 34567
+// Lucía Torres - Legajo 45678
+// Martín Ruiz - Legajo 56789
 
-import './styles/App.css';
+import React, { useState } from 'react';
 import HomePages from './pages/Homepages';
+import './styles/App.css';
 
 function App() {
-  const integrantes = [
-    { nombre: "Juan", apellido: "Pérez", legajo: "12345", github: "https://github.com/juanperez", foto: "https://via.placeholder.com/150", color: "#ffe0e0" },
-    { nombre: "María", apellido: "Gómez", legajo: "67890", github: "https://github.com/mariagomez", foto: "https://via.placeholder.com/150", color: "#e0f7ff" },
-    { nombre: "Luis", apellido: "Rodríguez", legajo: "11223", github: "https://github.com/luisrodriguez", foto: "https://via.placeholder.com/150", color: "#e0ffe0" },
-    { nombre: "Sofía", apellido: "Martínez", legajo: "44556", github: "https://github.com/sofiamartinez", foto: "https://via.placeholder.com/150", color: "#fff0e0" },
-    { nombre: "Pedro", apellido: "López", legajo: "77889", github: "https://github.com/pedrolopez", foto: "https://via.placeholder.com/150", color: "#f0e0ff" }
-  ];
+  const nombre = "Pablo";
+  const persona = {
+    nombre: 'Carlos',
+    edad: 20,
+    curso: 'programación',
+    Asistencia: false,
+  };
 
-  return <HomePages integrantes={integrantes} />;
+  const [grupo, setGrupo] = useState([
+    { nombre: 'Lucas', edad: 25, apellido: "Martínez", legajo: "10001", github: "https://github.com/lucas", foto: "https://via.placeholder.com/100" },
+    { nombre: 'Luciana', edad: 19, apellido: "Fernández", legajo: "10002", github: "https://github.com/luciana", foto: "https://via.placeholder.com/100" },
+    { nombre: 'Julieta', edad: 26, apellido: "Rodríguez", legajo: "10003", github: "https://github.com/julieta", foto: "https://via.placeholder.com/100" },
+    { nombre: 'Jorge', edad: 30, apellido: "Pérez", legajo: "10004", github: "https://github.com/jorge", foto: "https://via.placeholder.com/100" },
+    { nombre: 'Cristian', edad: 30, apellido: "García", legajo: "10005", github: "https://github.com/cristian", foto: "https://via.placeholder.com/100" }
+  ]);
+
+  const agregarIntegrante = (nuevoIntegrante) => {
+    setGrupo([...grupo, nuevoIntegrante]);
+  };
+
+  return (
+    <div className="App">
+      <HomePages
+        nombre={nombre}
+        persona={persona}
+        grupo={grupo}
+        agregarIntegrante={agregarIntegrante}
+      />
+    </div>
+  );
 }
 
 export default App;

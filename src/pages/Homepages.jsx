@@ -1,13 +1,15 @@
-import React from 'react';
-import Header from '../components/Header';
-import Main from '../components/Main';
-import Footer from '../components/Footer';
+import React from "react";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
 
-const HomePages = ({ integrantes }) => {
+const HomePages = () => {
   return (
     <>
+      <Navbar />
       <Header />
-      <Main integrantes={integrantes} />
+      <Main />
       <Footer />
     </>
   );

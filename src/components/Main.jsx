@@ -1,27 +1,20 @@
-import React, { useState } from 'react';
-import '../styles/Cards.css';
+import React from 'react';
+import Nosotros from './Nosotros';
+import '../styles/Main.css';
 
-const Main = ({ integrantes }) => {
-  const [grupo] = useState([...integrantes]);
-
+const Main = ({ nombre, persona, grupo, agregarIntegrante }) => {
   return (
-    <main>
-      <section className="cards-container">
-        {grupo.map((int, i) => (
-          <a href={`#integrante-${i + 1}`} key={i} className="card">
-            <h3>{int.nombre}</h3>
-            <img src={int.foto} alt={`${int.nombre}`} />
-          </a>
-        ))}
+    <main className="main">
+      <section className="bienvenida">
+        <h2>Hola, {nombre}</h2>
+        <ul>
+          <li>Nombre: {persona.nombre}</li>
+          <li>Edad: {persona.edad}</li>
+          <li>Curso: {persona.curso}</li>
+          <li>Asistencia: {persona.Asistencia ? "Presente" : "Ausente"}</li>
+        </ul>
       </section>
-
-      {grupo.map((int, i) => (
-        <section key={i} id={`integrante-${i + 1}`} className="integrante-container" style={{ backgroundColor: int.color }}>
-          <h2>{int.nombre} {int.apellido}</h2>
-          <p><strong>Legajo:</strong> {int.legajo}</p>
-          <p><strong>GitHub:</strong> <a href={int.github} target="_blank" rel="noreferrer">{int.github}</a></p>
-        </section>
-      ))}
+      <Nosotros grupo={grupo} agregarIntegrante={agregarIntegrante} />
     </main>
   );
 };
