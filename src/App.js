@@ -9,6 +9,7 @@ import "./styles/App.css";
 import HomePages from "./pages/Homepages";
 import paulo_foto from './assets/paulo_foto.jpg';
 import santi_foto from './assets/santi_foto.jpg';
+import leo_foto from './assets/leo_foto.jpg'; 
 
 function App() {
   const integrantes = [
@@ -37,12 +38,12 @@ function App() {
       foto: "https://via.placeholder.com/200"
     },
     {
-      id: "jorge",
-      nombre: "Jorge",
-      apellido: "Pérez",
-      legajo: "45678",
-      github: "https://github.com/jorgeperez",
-      foto: "https://via.placeholder.com/200"
+      id: "leonardo",
+      nombre: "Leonardo",
+      apellido: "Ramirez",
+      legajo: "61084",
+      github: "https://github.com/leoramirez777",
+      foto: leo_foto
     },
     {
       id: "cristian",

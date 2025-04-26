@@ -2,13 +2,14 @@ import React from "react";
 import "../styles/Header.css";
 import paulo_foto from '../assets/paulo_foto.jpg';
 import santi_foto from '../assets/santi_foto.jpg';
+import leo_foto from "../assets/leo_foto.jpg";
 
 const Header = () => {
   const integrantes = [
     { id: "paulo", nombre: "Paulo", foto: paulo_foto },
     { id: "luciana", nombre: "Santiago", foto: santi_foto },
     { id: "julieta", nombre: "Jose", foto: "https://via.placeholder.com/150" },
-    { id: "jorge", nombre: "Leonardo", foto: "https://via.placeholder.com/150" },
+    { id: "leonardo", nombre: "Leonardo", foto: leo_foto },
     { id: "cristian", nombre: "Santiago", foto: "https://via.placeholder.com/150" },
   ];
 
