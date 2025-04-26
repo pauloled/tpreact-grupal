@@ -1,46 +1,19 @@
-import React, { useState } from 'react';
-import '../styles/Nosotros.css';
+import React from "react";
+import "../styles/Nosotros.css";
 
-const Nosotros = ({ grupo, agregarIntegrante }) => {
-  const [nuevo, setNuevo] = useState({
-    nombre: '', apellido: '', edad: '', legajo: '', github: '', foto: ''
-  });
-
-  const handleChange = (e) => {
-    setNuevo({ ...nuevo, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    agregarIntegrante(nuevo);
-    setNuevo({ nombre: '', apellido: '', edad: '', legajo: '', github: '', foto: '' });
-  };
-
+const Nosotros = ({ integrantes }) => {
   return (
-    <section id="integrantes" className="nosotros">
-      <h2>Integrantes</h2>
-      <div className="tarjetas">
-        {grupo.map((int, index) => (
-          <div key={index} className="tarjeta" id={int.nombre.toLowerCase()}>
-            <h3>{int.nombre} {int.apellido}</h3>
-            <img src={int.foto} alt={int.nombre} />
-            <p>Legajo: {int.legajo}</p>
-            <a href={int.github} target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        ))}
-      </div>
-      <section id="formulario" className="formulario">
-        <h3>Agregar nuevo integrante</h3>
-        <form onSubmit={handleSubmit}>
-          <input name="nombre" placeholder="Nombre" onChange={handleChange} value={nuevo.nombre} required />
-          <input name="apellido" placeholder="Apellido" onChange={handleChange} value={nuevo.apellido} required />
-          <input name="edad" type="number" placeholder="Edad" onChange={handleChange} value={nuevo.edad} required />
-          <input name="legajo" placeholder="Legajo" onChange={handleChange} value={nuevo.legajo} required />
-          <input name="github" placeholder="GitHub URL" onChange={handleChange} value={nuevo.github} required />
-          <input name="foto" placeholder="URL de la Foto" onChange={handleChange} value={nuevo.foto} required />
-          <button type="submit">Agregar</button>
-        </form>
-      </section>
+    <section className="nosotros-container">
+      {integrantes.map((integrante, index) => (
+        <div id={integrante.id} className="integrante-section" key={index}>
+          <h2>{integrante.nombre} {integrante.apellido}</h2>
+          <img src={integrante.foto} alt={integrante.nombre} />
+          <p>Legajo: {integrante.legajo}</p>
+          <a href={integrante.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      ))}
     </section>
   );
 };

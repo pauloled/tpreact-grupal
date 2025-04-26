@@ -4,12 +4,12 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 
-const HomePages = () => {
+const HomePages = ({ integrantes }) => {
   return (
     <>
       <Navbar />
       <Header />
-      <Main />
+      <Main integrantes={integrantes} />
       <Footer />
     </>
   );

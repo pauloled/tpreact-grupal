@@ -1,43 +1,58 @@
-// Integrantes:
-// Juan Pérez - Legajo 12345
-// Ana Gómez - Legajo 23456
-// Pedro Díaz - Legajo 34567
-// Lucía Torres - Legajo 45678
-// Martín Ruiz - Legajo 56789
+// Nombre: [Tus nombres y legajos]
+// Ejemplo:
+// Pablo Díaz - 12345
+// Juan Gómez - 67890
 
-import React, { useState } from 'react';
-import HomePages from './pages/Homepages';
-import './styles/App.css';
+import "./styles/App.css";
+import HomePages from "./pages/Homepages";
 
 function App() {
-  const nombre = "Pablo";
-  const persona = {
-    nombre: 'Carlos',
-    edad: 20,
-    curso: 'programación',
-    Asistencia: false,
-  };
-
-  const [grupo, setGrupo] = useState([
-    { nombre: 'Lucas', edad: 25, apellido: "Martínez", legajo: "10001", github: "https://github.com/lucas", foto: "https://via.placeholder.com/100" },
-    { nombre: 'Luciana', edad: 19, apellido: "Fernández", legajo: "10002", github: "https://github.com/luciana", foto: "https://via.placeholder.com/100" },
-    { nombre: 'Julieta', edad: 26, apellido: "Rodríguez", legajo: "10003", github: "https://github.com/julieta", foto: "https://via.placeholder.com/100" },
-    { nombre: 'Jorge', edad: 30, apellido: "Pérez", legajo: "10004", github: "https://github.com/jorge", foto: "https://via.placeholder.com/100" },
-    { nombre: 'Cristian', edad: 30, apellido: "García", legajo: "10005", github: "https://github.com/cristian", foto: "https://via.placeholder.com/100" }
-  ]);
-
-  const agregarIntegrante = (nuevoIntegrante) => {
-    setGrupo([...grupo, nuevoIntegrante]);
-  };
+  const integrantes = [
+    {
+      id: "paulo",
+      nombre: "Paulo",
+      apellido: "Ledesma",
+      legajo: "12345",
+      github: "https://github.com/lucasgonzalez",
+      foto: "https://via.placeholder.com/200"
+    },
+    {
+      id: "luciana",
+      nombre: "Luciana",
+      apellido: "Martínez",
+      legajo: "23456",
+      github: "https://github.com/lucianamartinez",
+      foto: "https://via.placeholder.com/200"
+    },
+    {
+      id: "julieta",
+      nombre: "Julieta",
+      apellido: "Fernández",
+      legajo: "34567",
+      github: "https://github.com/julietafernandez",
+      foto: "https://via.placeholder.com/200"
+    },
+    {
+      id: "jorge",
+      nombre: "Jorge",
+      apellido: "Pérez",
+      legajo: "45678",
+      github: "https://github.com/jorgeperez",
+      foto: "https://via.placeholder.com/200"
+    },
+    {
+      id: "cristian",
+      nombre: "Cristian",
+      apellido: "Lopez",
+      legajo: "56789",
+      github: "https://github.com/cristianlopez",
+      foto: "https://via.placeholder.com/200"
+    },
+  ];
 
   return (
     <div className="App">
-      <HomePages
-        nombre={nombre}
-        persona={persona}
-        grupo={grupo}
-        agregarIntegrante={agregarIntegrante}
-      />
+      <HomePages integrantes={integrantes} />
     </div>
   );
 }
