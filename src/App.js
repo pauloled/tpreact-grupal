@@ -14,7 +14,7 @@ import leo_foto from './assets/leo_foto.jpg';
 function App() {
   const integrantes = [
     {
-      id: "Paulo",
+      id: "paulo",
       nombre: "Paulo",
       apellido: "Ledesma",
       legajo: "61035",
@@ -22,7 +22,7 @@ function App() {
       foto: paulo_foto
     },
     {
-      id: "Santiago",
+      id: "santiago",
       nombre: "Santiago",
       apellido: "Ledesma",
       legajo: "61115",

@@ -7,7 +7,7 @@ import leo_foto from "../assets/leo_foto.jpg";
 const Header = () => {
   const integrantes = [
     { id: "paulo", nombre: "Paulo", foto: paulo_foto },
-    { id: "luciana", nombre: "Santiago", foto: santi_foto },
+    { id: "santiago", nombre: "Santiago", foto: santi_foto },
     { id: "julieta", nombre: "Jose", foto: "https://via.placeholder.com/150" },
     { id: "leonardo", nombre: "Leonardo", foto: leo_foto },
     { id: "cristian", nombre: "Santiago", foto: "https://via.placeholder.com/150" },
