@@ -1,7 +1,38 @@
-.main {
-    padding: 20px;
-  }
-  .bienvenida {
-    margin-bottom: 30px;
-  }
-  
+.main-container {
+  padding: 2rem;
+}
+
+.form-section {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.form-agregar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-agregar input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-agregar button {
+  padding: 0.8rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-agregar button:hover {
+  background-color: #45a049;
+}
