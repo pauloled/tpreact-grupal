@@ -10,6 +10,7 @@ import HomePages from "./pages/Homepages";
 import paulo_foto from './assets/paulo_foto.jpg';
 import santi_foto from './assets/santi_foto.jpg';
 import leo_foto from './assets/leo_foto.jpg'; 
+import imagenjq2 from './assets/imagenjq2.jpg'; 
 
 function App() {
   const integrantes = [
@@ -30,12 +31,12 @@ function App() {
       foto: santi_foto
     },
     {
-      id: "julieta",
-      nombre: "Julieta",
-      apellido: "Fernández",
-      legajo: "34567",
-      github: "https://github.com/julietafernandez",
-      foto: "https://via.placeholder.com/200"
+      id: "jose",
+      nombre: "Jose",
+      apellido: "Quiroga",
+      legajo: "61033",
+      github: "https://github.com/jose-qui",
+      foto: imagenjq2
     },
     {
       id: "leonardo",
